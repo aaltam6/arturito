@@ -1,37 +1,155 @@
-
-
 {% extends 'base.html' %}
 
 {% block content %}
 
-
-<div style="text-align: center; display: inline-block; padding: 10px; width: 100%; height: auto;">
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        h3
-        {
+        body {
+            font-family: Arial, sans-serif;
             color: white;
+            margin-top: 25px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        .header {
+            font-size: 30px;
+            margin-bottom: 10px;
+            margin-top: 20px;
             text-align: center;
         }
 
-        button input[type="submit"]
-        {
-            background-color: transparent;
-            border:none;
-            color: black;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
+        .body {
+            flex: 1;
+            text-align: left;
         }
 
+        .detail{
+            font-size: 12px;
+            margin-bottom: 10px;
+            margin-left: 25px;
+            text-align: left;
+        }
+
+        .image-box {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Media query for responsiveness */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .body {
+                max-width: 50%;
+            }
+
+            .images {
+                display: flex;
+                flex-direction: column;
+                margin-right: 100px;
+                margin-top: 25px;
+                max-width: 50%;
+            }
+        }
     </style>
+</head>
+<body>
+    <div class="container">
 
-<h3>Arturito</h3>
+        <div class="body">
+            <div class="header">
+                Arturo Altamirano
+            </div>
 
-</div>
+            <div>
+                23 year old graduate student studying Computer Science at Tulane University in New Orleans. Interesteed in Computer Architecure and Computer Networking.
+            </div>
+
+            <div class="header">
+                Education
+            </div>
+
+            <div>
+                M.S. Computer Science, Tulane University, 2025 (expected)
+                <br>
+                B.S. Information Systems and Analytics, Louisiana State University, 2023
+            </div>
+
+            <div class="header">
+                Experience
+            </div>
+
+            <div>
+                Computer Engineering Intern, Syncom Space Services 05/2024 - 08/2024
+                <br>
+                Information Technology Intern, GMFS Mortgage 05/2022 - 08/2023
+            </div>
+
+            <div class="header">
+                Projects
+            </div>
+
+            <div>
+                Tomintli
+                <div class="detail">
+                    Neural network-driven financial analysis tool that provides a comprehensive evaluation of investment opportunities based on historical financial events and trends.
+                    <br>
+                    TensorFlow Autoregressive RNN with Matplotlib visualization and Numpy dataset facilitation. This project represents a multi-year planned effort, and will be used by me for price point optimization throughout my investing career.
+                </div>
+                Review4U
+                <div class="detail">
+                    Flask Web App which utilizes the OpenAI Chat API to automatically generate restaurant reviews based on user input. 
+                    <br>
+                    Deployed to AWS ElasticBeanstalk and developed in Python 3.11 within the Flask framework with HTML/CSS templating. Utilizes OpenAI's Chat API and an integrated MySQL Database supported on AWS RDS (Relational Database Service).
+                    <br>
+                    Awarded first overall in the 2023 LSU ISDS Capstone Competition.
+                </div>
+            </div>
+
+            <div class="header">
+                Publications
+            </div>
+
+            <div>
+                Coming Soon
+            </div>
+
+
+
+        </div>
+
+        <div class="images">
+            <div class="image-box">
+                <img src="{{ url_for('static', filename='arturo.png') }}" alt="Tulane Logo">
+            </div>
+        </div>
+
+    </div>  
+</body>
+</html>
 
 {% endblock %}

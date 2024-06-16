@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        .header {
+            font-size: 40px;
+            text-align: center;
+            margin-top:20px;
+        }
+
+        .mini-header {
+            font-size: 20px;
+            margin-bottom: 10px;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .body {
+            flex: 1;
+            text-align: left;
+        }
+
+        .image-box {
+            flex: 1;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Media query for responsiveness */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .body {
+                max-width: 50%;
+            }
+
+            .images {
+                display: flex;
+                margin-top: 50px;
+                flex-direction: column;
+                max-width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="body">
+            <div class="header">
+                Experience
+            </div>
+
+
+            <div class="mini-header">
+                Computer Engineering Intern, Syncom Space Services 
+            </div>
+
+            <div>
+                I am currently working as an intern at the NASA Michoud Assembly Facility.
+            </div>
+
+            <div class="mini-header">
+                Information Technology Intern 
+            </div>
+
+            <div>
+                I worked for about 15 months as an IT Intern at GMFS. A mortgage company based in Baton Rouge. I worked a majority of my time there while finishing my undergraduate at LSU.
+            </div>
+        </div>
+
+
+
+        <div class="images">
+            <div class="image-box">
+                <img src="{{ url_for('static', filename='nasa.png') }}" alt="Tulane Logo">
+            </div>
+            <div class="image-box">
+                <img src="{{ url_for('static', filename='gmfslgo.png') }}" alt="LSU Logo">
+            </div>
+        </div>
+
+    </div>  
+</body>
+</html>
+
+{% endblock %}
