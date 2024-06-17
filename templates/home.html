@@ -7,6 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,10 +15,6 @@
             color: white;
             margin-top: 25px;
             padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
             background-color: #333;
         }
 
@@ -29,19 +26,20 @@
         }
 
         .header {
-            font-size: 22px;
+            font-size: 30px;
             margin-bottom: 10px;
             margin-top: 20px;
-            text-align: center;
+            text-align: left;
+            color: #285C4D;
         }
 
         .body {
-            flex: 1;
-            text-align: left;
-            max-width: 60%; /* Adjust this value as needed */
+            text-align: justify;
+            max-width: 60%;
+            margin: 0 auto;
         }
 
-        .detail{
+        .detail {
             font-size: 14px;
             margin-bottom: 10px;
             margin-left: 25px;
@@ -49,82 +47,96 @@
         }
 
         .image-box {
-            flex: 1;
-            margin-left: 20px;
+            text-align: center;
+            margin-top: 40px;
         }
 
         .image-box img {
             max-width: 100%;
-            height: auto;
+            height: 400px;
         }
 
-        /* Media query for responsiveness */
+        .image-box2 img {
+            max-width: 100%;
+            height: 180px;
+            padding-top: 10px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #75C5E8;
+        }
+
+        .subtext {
+            text-align: center;
+            font-size: 10px;
+        }
+
         @media (min-width: 768px) {
             .container {
                 flex-direction: row;
                 justify-content: space-between;
+                align-items: flex-start;
             }
 
             .body {
-                max-width: 60%; /* Adjust this value as needed */
+                max-width: 60%;
             }
 
             .images {
                 display: flex;
                 flex-direction: column;
-                margin-right: 20px; /* Adjust this value as needed */
+                justify-content: center;
+                align-items: center;
                 margin-top: 25px;
-                max-width: 40%; /* Adjust this value as needed */
-
+                max-width: 100%;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-
         <div class="body">
             <div class="header">
                 Arturo Altamirano
             </div>
 
             <div>
-                23 year old graduate student studying Computer Science at Tulane University in New Orleans. Interesteed in Computer Architecure and Computer Networking.
+                I am a 23-year-old graduate student currently pursuing a degree in Computer Science at Tulane University in New Orleans. 
+                My primary academic interests lie in Computer Architecture and Computer Networking. 
+                Throughout my studies, I have cultivated a robust understanding of the intricate design and functionality of computing systems, as well as the complexities of network communication. 
+                I have engaged in various research projects and coursework that have honed my skills in these areas, and I am passionate about exploring innovative solutions to modern technological challenges.
+                My objective is to leverage my knowledge and expertise to contribute to advancements in technology, with a particular focus on improving the efficiency and performance of computer systems and networks.
             </div>
 
             <div class="header">
-                Education
+                Research Interest
             </div>
 
             <div>
-                M.S. Computer Science, Tulane University, 2025 (expected)
-                <br>
-                B.S. Information Systems and Analytics, Louisiana State University, 2023
+                I'm a 23-year-old Computer Science graduate student at Tulane University, specializing in Computer Architecture and Networking. 
+                I aim to leverage my coursework and research experience to drive technological innovation.
             </div>
 
             <div class="header">
-                Experience
+                Teaching Assistanceship
             </div>
 
             <div>
-                Computer Engineering Intern, Syncom Space Services 05/2024 - 08/2024
-                <br>
-                Information Technology Intern, GMFS Mortgage 05/2022 - 08/2023
-            </div>
-
-            <div class="header">
-                Projects
-            </div>
-
-            <div>
-                Tomintli
-                <div class="detail">
-                    Neural Network-Driven Financial Analysis Tool.
-                </div>
-                Review4U
-                <div class="detail">
-                    AI-Powered Resturant Review Generator
-                </div>
+                I am not currently teaching at this time.
             </div>
 
             <div class="header">
@@ -135,16 +147,34 @@
                 Coming Soon
             </div>
 
+            <div class="header">
+                Preprints
+            </div>
 
-
+            <div>
+                Coming Soon
+            </div>
         </div>
 
         <div class="images">
             <div class="image-box">
                 <img src="{{ url_for('static', filename='arturo.png') }}" alt="Tulane Logo">
             </div>
-        </div>
 
+            <div class="social-icons">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://leetcode.com/yourprofile" target="_blank"><i class="fas fa-laptop-code"></i></a>
+                <a href="https://scholar.google.com/" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+
+            </div>
+
+            <div class="images">
+                <div class="image-box2">
+                    <img src="{{ url_for('static', filename='tulanelgo.png') }}" alt="Tulane Logo">
+                </div>
+
+        </div>
     </div>  
 </body>
 </html>

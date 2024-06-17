@@ -9,16 +9,16 @@ def home():
      else:
           return render_template('home.html')
 
-@app.route('/experience', methods=['GET', 'POST'])
-def experience():
+@app.route('/CV', methods=['GET', 'POST'])
+def CV():
     if request.method == 'POST':
-         return render_template('experience.html')
+         return render_template('CV.html')
     else:
-          return render_template('experience.html')
+          return render_template('CV.html')
     
-@app.route('/education', methods=['GET', 'POST'])
-def education():
+@app.route('/extra', methods=['GET', 'POST'])
+def extra():
     if request.method == 'POST':
-         return render_template('education.html')
+         return render_template('extra.html')
     else:
-          return render_template('education.html')
+          return render_template('extra.html')
