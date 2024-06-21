@@ -173,7 +173,7 @@
 
         <div class="images">
             <div class="image-box">
-                <img src="static/tulane.png" alt="Description of Image 1">
+                <img src="{{ url_for('static', filename='tulane.png') }}" alt="Tulane Logo">
             </div>
 
             <div class="social-icons">
@@ -183,7 +183,7 @@
                 <a href="https://scholar.google.com/" target="_blank"><i class="fas fa-graduation-cap"></i></a>
             </div>
 
-            <a href="static/resume.pdf" download class="download-btn">Resume Download</a>
+            <a href="{{ url_for('static', filename='resume.pdf') }}" download class="download-btn">Resume Download</a>
         </div>
     </div>  
 </body>
