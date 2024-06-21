@@ -11,7 +11,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            font-size: 18px;
+            font-size: 25px;
             color: white;
             margin-top: 25px;
             padding: 20px;
@@ -26,7 +26,7 @@
         }
 
         .header {
-            font-size: 30px;
+            font-size: 40px;
             margin-bottom: 10px;
             margin-top: 20px;
             text-align: left;
@@ -39,13 +39,6 @@
             margin: 0 auto;
         }
 
-        .detail {
-            font-size: 14px;
-            margin-bottom: 10px;
-            margin-left: 25px;
-            text-align: left;
-        }
-
         .image-box {
             text-align: center;
             margin-top: 40px;
@@ -54,18 +47,21 @@
         .image-box img {
             max-width: 100%;
             height: 400px;
+            margin-left: 15px;
         }
 
         .image-box2 img {
             max-width: 100%;
             height: 180px;
-            padding-top: 10px;
+            margin-top: 15px;
+            margin-left: 15px;
         }
 
         .social-icons {
             display: flex;
             justify-content: center;
             margin-top: 10px;
+            margin-left: 15px;
         }
 
         .social-icons a {
@@ -77,11 +73,6 @@
 
         .social-icons a:hover {
             color: #75C5E8;
-        }
-
-        .subtext {
-            text-align: center;
-            font-size: 10px;
         }
 
         @media (min-width: 768px) {
@@ -158,7 +149,7 @@
 
         <div class="images">
             <div class="image-box">
-                <img src="{{ url_for('static', filename='arturo.png') }}" alt="Tulane Logo">
+                <img src="{{ url_for('static', filename='arturo.png') }}" alt="Arturo Altamirano">
             </div>
 
             <div class="social-icons">
@@ -166,14 +157,11 @@
                 <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://leetcode.com/yourprofile" target="_blank"><i class="fas fa-laptop-code"></i></a>
                 <a href="https://scholar.google.com/" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-
             </div>
 
-            <div class="images">
-                <div class="image-box2">
-                    <img src="{{ url_for('static', filename='tulanelgo.png') }}" alt="Tulane Logo">
-                </div>
-
+            <div class="image-box2">
+                <img src="{{ url_for('static', filename='grwave.png') }}" alt="Tulane Logo">
+            </div>
         </div>
     </div>  
 </body>

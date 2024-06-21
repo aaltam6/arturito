@@ -22,3 +22,10 @@ def extra():
          return render_template('extra.html')
     else:
           return render_template('extra.html')
+    
+@app.route('/aws', methods=['GET', 'POST'])
+def aws():
+     if request.method == 'POST':
+          return render_template('aws.html')
+     else:
+          return render_template('aws.html')
