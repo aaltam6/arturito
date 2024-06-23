@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Home{% endblock %} - Arturo Altamirano</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        nav {
+            background-color: #285C4D;
+            color: white;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        nav a:hover {
+            color: #78BE20;
+        }
+        .header {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .image-box {
+            margin-top: 20px;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">Home</a>
+            <a href="/CV">CV</a>
+            <a href="/extra">Extras</a>
+        </nav>
+        <div class="content">
+            <div class="header">Arturo Altamirano</div>
+            <div>
+                <p>I am a 23-year-old graduate student currently pursuing a degree in Computer Science at Tulane University in New Orleans. My primary academic interests lie in Computer Architecture and Computer Networking. Throughout my studies, I have cultivated a robust understanding of the intricate design and functionality of computing systems, as well as the complexities of network communication. I have engaged in various research projects and coursework that have honed my skills in these areas, and I am passionate about exploring innovative solutions to modern technological challenges. My objective is to leverage my knowledge and expertise to contribute to advancements in technology, with a particular focus on improving the efficiency and performance of computer systems and networks.</p>
+            </div>
+            <div class="header">Research Interest</div>
+            <div>
+                <p>I'm a 23-year-old Computer Science graduate student at Tulane University, specializing in Computer Architecture and Networking. I aim to leverage my coursework and research experience to drive technological innovation.</p>
+            </div>
+            <div class="header">Teaching Assistanceship</div>
+            <div>
+                <p>I am not currently teaching at this time.</p>
+            </div>
+            <div class="header">Publications</div>
+            <div>
+                <p>Coming Soon</p>
+            </div>
+            <div class="header">Preprints</div>
+            <div>
+                <p>Coming Soon</p>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="{{ url_for('static', filename='arturo.png') }}" alt="Description of Image 1">
+        </div>
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+            <a href="https://leetcode.com/yourprofile" target="_blank">LeetCode</a>
+            <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+        </div>
+        <div class="image-box">
+            <img src="{{ url_for('static', filename='grwave.png') }}" alt="Description of Image 2">
+        </div>
+    </div>
+</body>
+</html>
