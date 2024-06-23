@@ -1,6 +1,63 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>  - Home</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: black;
+            z-index: 0;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #285C4D;
+            margin-bottom: 10px;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            margin: 10px;
+        }
 
-{% block content %}
+        nav a:hover {
+            color: #78BE20;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            padding-top: 10px; /* Ensure content is not hidden under the nav */
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/CV">CV</a>
+        <a href="/extra">Extras</a>
+    </nav>
+    <div class="content">
+        
 
 <!DOCTYPE html>
 <html lang="en">
@@ -173,7 +230,7 @@
 
         <div class="images">
             <div class="image-box">
-                <img src="static/tulane.png" alt="Description of Image 1">
+                <img src="/static/tulane.png" alt="Description of Image 1">
             </div>
 
             <div class="social-icons">
@@ -183,11 +240,13 @@
                 <a href="https://scholar.google.com/" target="_blank"><i class="fas fa-graduation-cap"></i></a>
             </div>
 
-            <a href="static/resume.pdf" download class="download-btn">Resume Download</a>
+            <a href="/static/resume.pdf" download="resume.pdf" class="download-btn">Resume Download</a>
         </div>
     </div>  
 </body>
 </html>
 
-{% endblock %}
 
+    </div>
+</body>
+</html>
